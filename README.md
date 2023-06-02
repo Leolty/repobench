@@ -1,6 +1,6 @@
 # RepoBench
 
-Code for the paper ["RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"]()
+Dataset for the paper ["RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"]()
 
 ## Installation
 
@@ -188,7 +188,9 @@ settings = ["cross_file_first", "cross_file_random", "in_file"]
 
 cross_file_first, cross_file_random, in_file = load_data(task=task, language=language, settings=settings)
 ```
+## Baseline
 
+See [BASELINE.md](BASELINE.md) for more details.
 
 ## Citation
 ```bibtex
