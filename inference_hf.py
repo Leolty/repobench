@@ -26,7 +26,7 @@ def main(
         load_in_8bit:bool, # NOTICE: for 16B model, load_8bit=True
         batch_size:int # NOTICE: for 16B model, batch_size=1
         ):
-    tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir="cache")
+    tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     # tokenizer.pad_token = tokenizer.eos_token
     tokenizer.pad_token_id = tokenizer.eos_token_id
     if "incoder" in checkpoint:

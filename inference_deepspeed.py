@@ -52,7 +52,7 @@ def main(
 
     # load model and tokenizer
 
-    tokenizer = AutoTokenizer.from_pretrained(chosen_model, cache_dir="cache")
+    tokenizer = AutoTokenizer.from_pretrained(chosen_model)
     tokenizer.pad_token_id = tokenizer.eos_token_id
     if "incoder" in chosen_model:
         PAD = "<pad>"
@@ -66,7 +66,7 @@ def main(
         checkpoint = torch.load(ckpt, map_location="cpu")
         
         # load model config
-        config = AutoConfig.from_pretrained(chosen_model, cache_dir="cache")
+        config = AutoConfig.from_pretrained(chosen_model)
         config.pad_token_id = config.eos_token_id
         config.vocab_size = len(tokenizer)
 
@@ -88,7 +88,7 @@ def main(
     else:
         print("load model from {}".format(chosen_model))
         model = AutoModelForCausalLM.from_pretrained(
-            chosen_model, torch_dtype=torch.float16, cache_dir="cache"
+            chosen_model, torch_dtype=torch.float16
             )
         model.config.pad_token_id = model.config.eos_token_id
         model.resize_token_embeddings(len(tokenizer))
