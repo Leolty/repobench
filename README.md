@@ -34,7 +34,7 @@ RepoBench-R (Retrieval) targets the retrieval component of a repository-level au
 
 The data format for RepoBench-R is as follows. Specifically, this task has two subsets: *easy* and *hard*. Suppose the number of code snippets in the context is $k$, then for the *easy* subset, we have $5 \leq k < 10$, while for the *hard* subset, we have $k \geq 10$.
 
-```json
+```JSONC
 {
     "easy": [{
             "file_path": "path/to/file",
@@ -81,7 +81,7 @@ RepoBench-C (Code Completion) focuses on the prediction of the next line of code
 
 The data format for RepoBench-C is as follows. Specifically, this task has three subset: *train*, *dev*, *test*.
 
-```json
+```JSONC
 {
     "train": [{
         "file_path": "path/to/file",
@@ -131,7 +131,7 @@ in_file = construct_trainable_data(in_file)
 
 The format will be as follows:
 
-```json
+```JSONC
 {
     "data": "prompt (cross-file context + import statements + in-file code)",
     "label": "target (next line of code)"
@@ -146,7 +146,7 @@ RepoBench-P (Pipeline) is a pipeline task that combines the retrieval and code c
 
 The data format for RepoBench-P is as follows:
 
-```json
+```JSONC
 [
     {
         "file_path": "path/to/current_file",
