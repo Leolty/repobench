@@ -2,6 +2,9 @@ import gzip
 import pickle
 from tqdm import tqdm
 from typing import Union
+import os
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 def load_data(task:str, language:str, settings: Union[str, list]):
     """
@@ -59,7 +62,7 @@ def load_data(task:str, language:str, settings: Union[str, list]):
     data = {}
 
     for setting in tqdm(settings, desc=f"Loading data"):
-        with gzip.open(f"data/{task}/{language}/{setting}.gz", 'rb') as f:
+        with gzip.open(f"{ROOT}/{task}/{language}/{setting}.gz", 'rb') as f:
             data[setting] = pickle.load(f)
     
     if len(settings) == 1:
