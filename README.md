@@ -61,7 +61,7 @@ The data format for RepoBench-R is as follows. Specifically, this task has two s
 
 ### Load Data
 
-You can use `load_data` to load the data for RepoBench-C.
+You can use `load_data` to load the data for RepoBench-R. Note that we do not have `in_file` setting for RepoBench-R.
 
 ```python
 from repobench.data.utils import load_data
@@ -107,7 +107,7 @@ The data format for RepoBench-C is as follows. Specifically, this task has three
 
 ### Load Data
 
-You can use `load_data` to load the data for RepoBench-C.
+You can use `load_data` to load the data for RepoBench-C. Just simply change the `task` parameter to `completion`.
 
 ```python
 from repobench.data.utils import load_data
@@ -177,7 +177,7 @@ The data format for RepoBench-P is as follows:
 
 ### Load Data
 
-You can use `load_data` to load the data for RepoBench-P.
+You can use `load_data` to load the data for RepoBench-P. Just simply change the `task` parameter to `pipeline`.
 
 ```python
 from repobench.data.utils import load_data
@@ -187,6 +187,12 @@ task = "pipeline"
 settings = ["cross_file_first", "cross_file_random", "in_file"]
 
 cross_file_first, cross_file_random, in_file = load_data(task=task, language=language, settings=settings)
+```
+
+
+## Citation
+```bibtex
+to be added
 ```
 
 
