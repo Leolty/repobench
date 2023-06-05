@@ -36,13 +36,17 @@ As mentioned in paper, we have three settings for each task:
 
 ## How to Load Data
 
-Generally, you can use `load_data` under `data.utils` to load the data for each task. The parameters are as follows:
+You can typically use the `load_data` function found in `data.utils` to load the data for each task. The parameters required are:
 
-- `task`: str, the task name, can be `retrieval`, `completion`, or `pipeline`.
-- `language`: str, the language name, can be `python` or `java`.
-- `settings`: list, the settings for the task, can be the combination of `cross_file_first`, `cross_file_random`, and `in_file`.
+**Parameters**
 
-returns: a list of `dict`, each `dict` is a data sample with a specific setting.
+- `task` (str): The task name, which can be `retrieval`, `completion`, or `pipeline`.
+- `language` (str): The language name, which can be `python` or `java`.
+- `settings` (list): The settings for the task. This can be a combination of `cross_file_first`, `cross_file_random`, and `in_file`.
+
+**Returns**
+
+- A list of `dict` objects, where each `dict` is a data sample with a specific setting.
 
 For example, if you want to load the Python data for RepoBench-C with `cross_file_first`, `cross_file_random`, and `in_file` settings, you can do as follows:
 
