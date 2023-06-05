@@ -2,6 +2,8 @@
 
 Dataset for the paper ["RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"]()
 
+RepoBench is a dataset for repository-level code auto-completion, which consists of three tasks: RepoBench-R (Retrieval), RepoBench-C (Code Completion), and RepoBench-P (Pipeline).
+
 ## Installation
 
 Make sure to use python 3.7 or later:
@@ -14,7 +16,7 @@ $ conda activate repobench
 Clone the repository and install the requirements:
 
 ```bash
-$ git clone https://github.com/Leolty/repobench.git
+$ git clone https://github.com/Leolty/git
 $ pip install -e repobench
 ```
 
@@ -25,6 +27,31 @@ As mentioned in paper, we have three settings for each task:
 - `cross_file_first`: Masks the line that a module from a different file is first used.
 - `cross_file_random`: Masks a random line that a module from a different file is used (not the first usage).
 - `in_file`: Masks a random line that has no cross-file dependency.
+
+
+## How to Load Data
+
+Generally, you can use `load_data` under `data.utils` to load the data for each task. The parameters are as follows:
+
+- `task`: str, the task name, can be `retrieval`, `completion`, or `pipeline`.
+- `language`: str, the language name, can be `python` or `java`.
+- `settings`: list, the settings for the task, can be the combination of `cross_file_first`, `cross_file_random`, and `in_file`.
+
+returns: a list of `dict`, each `dict` is a data sample with a specific setting.
+
+For example, if you want to load the Python data for RepoBench-C with `cross_file_first`, `cross_file_random`, and `in_file` settings, you can do as follows:
+
+```python
+from data.utils import load_data
+
+language = "python"
+task = "completion"
+settings = ["cross_file_first", "cross_file_random", "in_file"]
+
+cross_file_first, cross_file_random, in_file = load_data(task=task, language=language, settings=settings)
+```
+
+The data format and specific usage for each task are as follows.
 
 ## RepoBench-R
 
@@ -64,7 +91,7 @@ The data format for RepoBench-R is as follows. Specifically, this task has two s
 You can use `load_data` to load the data for RepoBench-R. Note that we do not have `in_file` setting for RepoBench-R.
 
 ```python
-from repobench.data.utils import load_data
+from data.utils import load_data
 
 language = "python" # or "java"
 task = "retrieval"
@@ -110,7 +137,7 @@ The data format for RepoBench-C is as follows. Specifically, this task has three
 You can use `load_data` to load the data for RepoBench-C. Just simply change the `task` parameter to `completion`.
 
 ```python
-from repobench.data.utils import load_data
+from data.utils import load_data
 
 language = "python" # or "java"
 task = "completion"
@@ -122,7 +149,7 @@ cross_file_first, cross_file_random, in_file = load_data(task=task, language=lan
 You can also use `construct_trainable_data` to construct the prompt for inference or training.
 
 ```python
-from repobench.data.utils import construct_trainable_data
+from data.utils import construct_trainable_data
 
 cross_file_first = construct_trainable_data(cross_file_first)
 cross_file_random = construct_trainable_data(cross_file_random)
@@ -180,7 +207,7 @@ The data format for RepoBench-P is as follows:
 You can use `load_data` to load the data for RepoBench-P. Just simply change the `task` parameter to `pipeline`.
 
 ```python
-from repobench.data.utils import load_data
+from data.utils import load_data
 
 language = "python" # or "java"
 task = "pipeline"
