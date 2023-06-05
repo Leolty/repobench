@@ -7,13 +7,13 @@ CUDA_VISIBLE_DEVICES=0 python run_retriever.py \
     --model_name microsoft/unixcoder-base \
     --max_length 512 \
     --similarity cosine \
-    --keep_lines 3 10
+    --keep_lines [3,10]
 
 2. Lexical Retrieval
 python run_retriever.py \
     --language python \
     --similarity jaccard \
-    --keep_lines 3 5 10 20 30
+    --keep_lines [3,5,10,20,30]
     
 """
 
@@ -36,6 +36,11 @@ def main(
     settings = ["cross_file_first", "cross_file_random"]
     data_first, data_random = load_data("retrieval", language, settings)
 
+    # defualt lexical retrieval, no need to load the model
+    tokenizer = AutoTokenizer.from_pretrained("Salesforce/codegen-350M-multi", cache_dir="cache")
+    model = None
+
+    # if semantic retrieval
     if model_name:
         # load the tokenizer and model
         tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir="cache")
@@ -51,13 +56,13 @@ def main(
             max_length = 512
         elif "unixcoder" in model_name:
             max_length = 512
-            tokenizer = None
         
         if "unixcoder" in model_name:
             model = UniXcoder(model_name)
         else:
             model = AutoModel.from_pretrained(model_name, cache_dir="cache")
         model.to("cuda")
+    
     
     mapping = {
         "first": data_first,
@@ -67,12 +72,12 @@ def main(
     for setting, dataset in mapping.items():
         res = {}
         i = 0
-        for key, dic_list in dataset['test'].items():
+        for key, dic_list in dataset.items():
             res[key] = []
             for dic in tqdm(dic_list, desc=f"running {key}"):
                 res_dic = {}
                 for i in keep_lines:
-                    code = crop_code_lines(dic['long'], i)
+                    code = crop_code_lines(dic['code'], i)
                     candidates = dic['context']
                     res_dic[i] = retrieve(
                         code=code,
