@@ -1,6 +1,6 @@
 # Baseline
 
-We provide the baseline for RepoBench. We provide the role of each python file, the exact usage can be seen in the comments of the files.
+We provide the baseline for RepoBench. Specifically, we introduce the following files to run the baseline for each task:
 
 ## RepoBench-R
 
