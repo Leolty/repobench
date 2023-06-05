@@ -9,15 +9,16 @@ RepoBench is a dataset for repository-level code auto-completion, which consists
 Make sure to use python 3.7 or later:
 
 ```bash
-$ conda create -n repobench python=3.7
-$ conda activate repobench
+conda create -n repobench python=3.7
+conda activate repobench
 ```
 
 Clone the repository and install the requirements:
 
 ```bash
-$ git clone https://github.com/Leolty/git
-$ pip install -e repobench
+git clone https://github.com/Leolty/repobench.git
+cd repobench
+pip install -r requirements.txt
 ```
 
 ## Settings
