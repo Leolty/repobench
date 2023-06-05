@@ -1,6 +1,6 @@
 # Baseline
 
-We provide the baseline for RepoBench. Specifically, we introduce the following files to run the baseline for each task:
+We provide the baseline for RepoBench. Specifically, we introduce the following files to run the baseline for each task, you can check the bash command in each file (at the top of the comment) to run the baselines:
 
 ## RepoBench-R
 
