@@ -1,6 +1,6 @@
 # RepoBench
 
-Dataset for the paper ["RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems"]()
+Dataset for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems](https://arxiv.org/abs/2306.03091)
 
 RepoBench is a benchmark, consisting of three tasks:
 
@@ -230,7 +230,14 @@ See [BASELINE.md](BASELINE.md) for more details.
 
 ## Citation
 ```bibtex
-to be added
+@misc{liu2023repobench,
+      title={RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems}, 
+      author={Tianyang Liu and Canwen Xu and Julian McAuley},
+      year={2023},
+      eprint={2306.03091},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 
