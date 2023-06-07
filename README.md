@@ -3,7 +3,7 @@
 Dataset and code for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems](https://arxiv.org/abs/2306.03091)
 
 
-![RepoBench](assets/post_github.png)
+![RepoBench](assets/repobench.png)
 
 RepoBench consists of three tasks:
 
