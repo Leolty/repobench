@@ -5,7 +5,9 @@ Dataset for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Comple
 RepoBench is a benchmark, consisting of three tasks:
 
 1️⃣ RepoBench-R (Retrieval) 🔎: To retrieve relevant code snippets for next-line code prediction.
+
 2️⃣ RepoBench-C (Code Completion) 🔮: To predict the next line of code given in-file context and cross-file context.
+
 3️⃣ RepoBench-P (Pipeline) 🧩: To manage complex tasks requiring a combination of retrieval and next-line code prediction.
 
 ## Installation
