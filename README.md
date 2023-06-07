@@ -1,6 +1,6 @@
 # RepoBench
 
-Dataset for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems](https://arxiv.org/abs/2306.03091)
+Dataset and code for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems](https://arxiv.org/abs/2306.03091)
 
 RepoBench is a benchmark, consisting of three tasks:
 
