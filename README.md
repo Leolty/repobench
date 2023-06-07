@@ -4,9 +4,9 @@ Dataset for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Comple
 
 RepoBench is a benchmark, consisting of three tasks:
 
-1. RepoBench-R (Retrieval): To retrieve relevant code snippets for next-line code prediction.
-2. RepoBench-C (Code Completion): To predict the next line of code given in-file context and cross-file context.
-3. RepoBench-P (Pipeline): To manage complex tasks requiring a combination of retrieval and next-line code prediction.
+1️⃣ RepoBench-R (Retrieval) 🔎: To retrieve relevant code snippets for next-line code prediction.
+2️⃣ RepoBench-C (Code Completion) 🔮: To predict the next line of code given in-file context and cross-file context.
+3️⃣ RepoBench-P (Pipeline) 🧩: To manage complex tasks requiring a combination of retrieval and next-line code prediction.
 
 ## Installation
 
@@ -36,7 +36,7 @@ As mentioned in paper, we have three settings for each task:
 
 ## How to Load Data
 
-You can typically use the `load_data` function found in `data.utils` to load the data for each task. The parameters required are:
+You can typically use the `load_data` function found in [`data/utils.py`](data/utils.py) to load the data for each task. The parameters required are:
 
 **Parameters**
 
