@@ -15,6 +15,8 @@ RepoBench consists of three tasks:
 
 ## Installation
 
+**We are actively developing support for 🤗 Huggingface Datasets - stay tuned for updates!**
+
 Make sure to use python 3.7 or later:
 
 ```bash
