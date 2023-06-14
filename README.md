@@ -80,6 +80,7 @@ The data format for RepoBench-R is as follows. Specifically, this task has two s
 ```JSONC
 {
     "easy": [{
+            "repo_name": "repository name of the data point",
             "file_path": "path/to/file",
             "context": [
                 "snippet 1",
@@ -127,6 +128,7 @@ The data format for RepoBench-C is as follows. Specifically, this task has three
 ```JSONC
 {
     "train": [{
+        "repo_name": "repository name of the data point",
         "file_path": "path/to/file",
         "context": "commented and concatenated cross-file context",
         "import_statement": "all import statements in the file",
@@ -192,6 +194,7 @@ The data format for RepoBench-P is as follows:
 ```JSONC
 [
     {
+        "repo_name": "repository name of the data point",
         "file_path": "path/to/current_file",
         "context": [
             {
