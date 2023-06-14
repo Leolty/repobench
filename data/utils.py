@@ -60,10 +60,57 @@ def load_data(task:str, language:str, settings: Union[str, list]):
 
     # load data
     data = {}
+    # We split retrieval data into shards due to the github file size limit
+    if task == "retrieval":
+        for setting in tqdm(settings, desc=f"Loading data"):
+            # we only further split the cross_file_first setting for java
+            if setting == "cross_file_first" and language == "java":
+                dic = {
+                    "train": {},
+                    "test": {}
+                }
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_easy_1.gz", 'rb') as f:
+                    train_easy_1 = pickle.load(f)
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_easy_2.gz", 'rb') as f:
+                    train_easy_2 = pickle.load(f)
+                dic['train']['easy'] = train_easy_1['easy'] + train_easy_2['easy']
 
-    for setting in tqdm(settings, desc=f"Loading data"):
-        with gzip.open(f"{ROOT}/{task}/{language}/{setting}.gz", 'rb') as f:
-            data[setting] = pickle.load(f)
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_hard_1.gz", 'rb') as f:
+                    train_hard_1 = pickle.load(f)
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_hard_2.gz", 'rb') as f:
+                    train_hard_2 = pickle.load(f)
+                dic['train']['hard'] = train_hard_1['hard'] + train_hard_2['hard']
+
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_test.gz", 'rb') as f:
+                    test = pickle.load(f)
+                dic['test'] = test['test']
+        
+            
+                data[setting] = dic
+        
+            else:
+                dic = {
+                    "train": {},
+                    "test": {}
+                }
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_easy.gz", 'rb') as f:
+                    train_easy = pickle.load(f)
+                dic['train']['easy'] = train_easy['easy']
+
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_train_hard.gz", 'rb') as f:
+                    train_hard = pickle.load(f)
+                dic['train']['hard'] = train_hard['hard']
+
+                with gzip.open(f"{ROOT}/{task}/{language}/{setting}_test.gz", 'rb') as f:
+                    test = pickle.load(f)
+                dic['test'] = test['test']
+        
+                data[setting] = dic
+
+    else:
+        for setting in tqdm(settings, desc=f"Loading data"):
+            with gzip.open(f"{ROOT}/{task}/{language}/{setting}.gz", 'rb') as f:
+                data[setting] = pickle.load(f)
     
     if len(settings) == 1:
         return data[settings[0]]
