@@ -24,6 +24,8 @@ conda create -n repobench python=3.7
 conda activate repobench
 ```
 
+> **Note**: The repository includes all the compressed data of RepoBench, which is about ~1.8GB. Please make sure you have enough space on your disk before cloning the repository.
+
 Clone the repository and install the requirements:
 
 ```bash
