@@ -25,6 +25,8 @@ RepoBench is available on 🤗 HuggingFace Datasets. Check out the dataset cards
 
 ### Load by cloning the repository
 
+> **Note**: The repository includes all the compressed data of RepoBench, which is about ~1.8GB. Please make sure you have enough space on your disk before cloning the repository.
+
 Make sure to use python 3.7 or later:
 
 ```bash
@@ -32,17 +34,15 @@ conda create -n repobench python=3.7
 conda activate repobench
 ```
 
-> **Note**: The repository includes all the compressed data of RepoBench, which is about ~1.8GB. Please make sure you have enough space on your disk before cloning the repository.
-
 Clone the repository and install the requirements:
+
+> **Note**: If you just want to use the dataset, you can skip the installation of the requirements.
 
 ```bash
 git clone https://github.com/Leolty/repobench.git
 cd repobench
 pip install -r requirements.txt
 ```
-
-> **Note**: If you just want to use the dataset, you can skip the installation of the requirements.
 
 ## Settings
 
