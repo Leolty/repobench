@@ -15,7 +15,15 @@ RepoBench consists of three tasks:
 
 ## Installation
 
-**We are actively developing support for 🤗 Huggingface Datasets - stay tuned for updates!**
+### Load on 🤗 HuggingFace Datasets
+
+RepoBench is available on 🤗 HuggingFace Datasets. Check out the dataset cards:
+
+- [RepoBench-R](https://huggingface.co/datasets/tianyang/repobench-r)
+- [RepoBench-C](https://huggingface.co/datasets/tianyang/repobench-c)
+- [RepoBench-P](https://huggingface.co/datasets/tianyang/repobench-p)
+
+### Load by cloning the repository
 
 Make sure to use python 3.7 or later:
 
