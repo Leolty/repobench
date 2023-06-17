@@ -42,6 +42,8 @@ cd repobench
 pip install -r requirements.txt
 ```
 
+> **Note**: If you just want to use the dataset, you can skip the installation of the requirements.
+
 ## Settings
 
 As mentioned in paper, we have three settings for each task:
