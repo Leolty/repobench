@@ -39,7 +39,7 @@ def main(file_path:str):
             acc_at_1 = accuracy_at_k(res_dic[i], res_dic['ground_truth'], k=1)*100
             acc_at_3 = accuracy_at_k(res_dic[i], res_dic['ground_truth'], k=3)*100
 
-            print(f"Easy Level, {i} lines lept, acc@1: {acc_at_1:.2f}, acc@3: {acc_at_3:.2f}")
+            print(f"Easy Level, {i} lines kept, acc@1: {acc_at_1:.2f}, acc@3: {acc_at_3:.2f}")
         
         # get the list of keys
         kept_lines = list(data['hard'][0].keys())
@@ -59,7 +59,7 @@ def main(file_path:str):
             acc_at_3 = accuracy_at_k(res_dic[i], res_dic['ground_truth'], k=3)*100
             acc_at_5 = accuracy_at_k(res_dic[i], res_dic['ground_truth'], k=5)*100
 
-            print(f"Hard Level, {i} lines lept, acc@1: {acc_at_1:.2f}, acc@3: {acc_at_3:.2f}, acc@5: {acc_at_5:.2f}")
+            print(f"Hard Level, {i} lines kept, acc@1: {acc_at_1:.2f}, acc@3: {acc_at_3:.2f}, acc@5: {acc_at_5:.2f}")
 
 
     # if completion or pipeline
