@@ -39,10 +39,6 @@ def main(
     data_first = data_first["test"]
     data_random = data_random["test"]
 
-    # only sample 100 for easy and 100 for hard
-    data_first = {k: data_first[k][:100] for k in data_first}
-    data_random = {k: data_random[k][:100] for k in data_random}
-
     # defualt lexical retrieval, no need to load the model
     tokenizer = AutoTokenizer.from_pretrained("Salesforce/codegen-350M-multi", cache_dir="cache")
     model = None
