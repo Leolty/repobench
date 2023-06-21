@@ -7,7 +7,7 @@ CUDA_VISIBLE_DEVICES=0 python run_retriever.py \
     --model_name microsoft/unixcoder-base \
     --max_length 512 \
     --similarity cosine \
-    --keep_lines [3,10]
+    --keep_lines [3]
 
 2. Lexical Retrieval
 python run_retriever.py \
@@ -35,6 +35,13 @@ def main(
     # load the data
     settings = ["cross_file_first", "cross_file_random"]
     data_first, data_random = load_data("retrieval", language, settings)
+
+    data_first = data_first["test"]
+    data_random = data_random["test"]
+
+    # only sample 100 for easy and 100 for hard
+    data_first = {k: data_first[k][:100] for k in data_first}
+    data_random = {k: data_random[k][:100] for k in data_random}
 
     # defualt lexical retrieval, no need to load the model
     tokenizer = AutoTokenizer.from_pretrained("Salesforce/codegen-350M-multi", cache_dir="cache")
