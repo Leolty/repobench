@@ -15,9 +15,9 @@ RepoBench consists of three tasks:
 
 ## Installation
 
-### Load on 🤗 HuggingFace Datasets
+### Load with 🤗 HuggingFace Datasets
 
-RepoBench is available on 🤗 HuggingFace Datasets. Check out the dataset cards:
+RepoBench is now accessible on 🤗 HuggingFace Datasets. Explore the dataset cards:
 
 - [RepoBench-R](https://huggingface.co/datasets/tianyang/repobench-r)
 - [RepoBench-C](https://huggingface.co/datasets/tianyang/repobench-c)
@@ -25,7 +25,7 @@ RepoBench is available on 🤗 HuggingFace Datasets. Check out the dataset cards
 
 ### Load by cloning the repository
 
-> **Note**: The repository includes all the compressed data of RepoBench, which is about ~1.8GB. Please make sure you have enough space on your disk before cloning the repository.
+> **Note**: The repository includes all the compressed data for RepoBench, amounting to ~1.8GB. Please ensure you have sufficient disk space before cloning the repository.
 
 Make sure to use python 3.7 or later:
 
@@ -46,16 +46,16 @@ pip install -r requirements.txt
 
 ## Settings
 
-As mentioned in paper, we have three settings for each task:
+As discussed in the paper, we have three settings for each task:
 
-- `cross_file_first`: Masks the line that a module from a different file is first used.
-- `cross_file_random`: Masks a random line that a module from a different file is used (not the first usage).
+- `cross_file_first`: Masks the line where a module from a different file is used for the first time.
+- `cross_file_random`: Masks a random line where a module from a different file is used (not the first usage).
 - `in_file`: Masks a random line that has no cross-file dependency.
 
 
 ## How to Load Data
 
-You can typically use the `load_data` function found in [`data/utils.py`](data/utils.py) to load the data for each task. The parameters required are:
+You can generally use the `load_data` function found in [`data/utils.py`](data/utils.py) to load the data for each task. The parameters required are:
 
 **Parameters**
 
@@ -251,6 +251,9 @@ cross_file_first, cross_file_random, in_file = load_data(task=task, language=lan
 See [BASELINE.md](BASELINE.md) for more details.
 
 ## Citation
+
+If you use RepoBench in your research, please consider citing us:
+
 ```bibtex
 @misc{liu2023repobench,
       title={RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems}, 
