@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/Leolty/repobench">
-    <img src="assets/logo_light.png#gh-light-mode-only" width="318px" alt="repobench logo" />
+  <a href="https://github.com/Leolty/repobench#gh-light-mode-only">
+    <img src="assets/logo_light.png" width="318px" alt="repobench logo" />
   </a>
-  <a href="https://github.com/Leolty/repobench">
-    <img src="assets/logo_dark.png#gh-dark-mode-only" width="318px" alt="repobench logo" />
+  <a href="https://github.com/Leolty/repobench#gh-dark-mode-only">
+    <img src="assets/logo_dark.png" width="318px" alt="repobench logo" />
   </a>
 
 <p align="center"><i>RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems</i></p>
