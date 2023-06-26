@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/RCP.png" width="800px" alt="RepoBench-RCP" />
+  <img src="assets/rcp_v1.png" width="800px" alt="rcp" />
 </p>
 
 <hr>
