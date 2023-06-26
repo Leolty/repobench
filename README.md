@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/rcp_v1.png" width="800px" alt="rcp" />
+  <img src="assets/rcp_v3.png" width="800px" alt="rcp" />
 </p>
 
 <hr>
