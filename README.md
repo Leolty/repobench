@@ -28,28 +28,10 @@
 <p align="center">
   <strong>🚀 Embark on a Journey with RepoBench Tasks! 🚀</strong>
 </p>
-<div align="center">
-  <div style="display: flex; align-items: center; justify-content: center;">
-    <div style="margin: 20px;">
-    <h2>🔍 RepoBench-R </h2>
-    <p>
-        <span style="font-size: 200%;">R</span>etrieve relevant code snippets for next-line code prediction.
-    </p>
-    </div>
-    <div style="margin: 20px;">
-        <h2>🔮 RepoBench-C </h2>
-        <p>
-            <span style="font-size: 200%;">C</span>omplete the next line of code given in-file and cross-file context.
-        </p>
-    </div>
-    <div style="margin: 20px;">
-    <h2>🧩 RepoBench-P </h2>
-    <p>
-        <span style="font-size: 200%;">P</span>ipeline the process combining retrieval and next-line completion.
-    </p>
-    </div>
-</div>
-</div>
+
+<p align="center">
+  <img src="assets/RCP.png" width="800px" alt="RepoBench-RCP" />
+</p>
 
 <hr>
 
