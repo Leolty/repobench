@@ -33,7 +33,9 @@
   <img src="assets/rcp_v3.png" width="800px" alt="rcp" />
 </p>
 
-<hr>
+<p align="center">
+  <strong>🪐 Explore the RepoBench Dataset! 🪐</strong>
+</p>
 
 ## 🛠️ Installation
 
