@@ -75,7 +75,7 @@ As discussed in the paper, we have three settings for each task:
 - `in_file`: Masks a random line that has no cross-file dependency.
 
 
-## How to Load Data
+## 📥 How to Load Data
 
 You can generally use the `load_data` function found in [`data/utils.py`](data/utils.py) to load the data for each task. The parameters required are:
 
