@@ -1,27 +1,67 @@
-# RepoBench
+<p align="center">
+  <a href="https://github.com/Leolty/repobench">
+    <img src="assets/logo_light.png#gh-light-mode-only" width="318px" alt="repobench logo" />
+  </a>
+  <a href="https://github.com/Leolty/repobench">
+    <img src="assets/logo_dark.png#gh-dark-mode-only" width="318px" alt="repobench logo" />
+  </a>
 
-Dataset and code for the paper [RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems](https://arxiv.org/abs/2306.03091)
+<p align="center"><i>RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems</i></p>
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2306.03091">
+    <img src="https://img.shields.io/badge/Paper-arXiv%3A2306.03091-blue" alt="Paper">
+  </a>
+  <a href="https://huggingface.co/datasets/tianyang/repobench-r">
+    <img src="https://img.shields.io/badge/🤗-RepoBench--R-orange" alt="RepoBench-R">
+  </a>
+  <a href="https://huggingface.co/datasets/tianyang/repobench-c">
+    <img src="https://img.shields.io/badge/🤗-RepoBench--C-orange" alt="RepoBench-C">
+  </a>
+  <a href="https://huggingface.co/datasets/tianyang/repobench-p">
+    <img src="https://img.shields.io/badge/🤗-RepoBench--P-orange" alt="RepoBench-P">
+  </a>
+</p>
 
-![RepoBench](assets/repobench.png)
+<hr>
 
-RepoBench consists of three tasks:
+<p align="center">
+  <strong>🚀 Embark on a Journey with RepoBench Tasks! 🚀</strong>
+</p>
+<div align="center">
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <div style="margin: 20px;">
+    <h2>🔍 RepoBench-R </h2>
+    <p>
+        <span style="font-size: 200%;">R</span>etrieve relevant code snippets for next-line code prediction.
+    </p>
+    </div>
+    <div style="margin: 20px;">
+        <h2>🔮 RepoBench-C </h2>
+        <p>
+            <span style="font-size: 200%;">C</span>omplete the next line of code given in-file and cross-file context.
+        </p>
+    </div>
+    <div style="margin: 20px;">
+    <h2>🧩 RepoBench-P </h2>
+    <p>
+        <span style="font-size: 200%;">P</span>ipeline the process combining retrieval and next-line completion.
+    </p>
+    </div>
+</div>
+</div>
 
-1️⃣ RepoBench-R (Retrieval) 🔎: To retrieve relevant code snippets for next-line code prediction.
+<hr>
 
-2️⃣ RepoBench-C (Code Completion) 🔮: To predict the next line of code given in-file context and cross-file context.
-
-3️⃣ RepoBench-P (Pipeline) 🧩: To manage complex tasks requiring a combination of retrieval and next-line code prediction.
-
-## Installation
+## 🛠️ Installation
 
 ### Load with 🤗 HuggingFace Datasets
 
 RepoBench is now accessible on 🤗 HuggingFace Datasets. Explore the dataset cards:
 
-- [RepoBench-R](https://huggingface.co/datasets/tianyang/repobench-r)
-- [RepoBench-C](https://huggingface.co/datasets/tianyang/repobench-c)
-- [RepoBench-P](https://huggingface.co/datasets/tianyang/repobench-p)
+- ![RepoBench-R](https://img.shields.io/badge/🤗-RepoBench--R-orange)
+- ![RepoBench-C](https://img.shields.io/badge/🤗-RepoBench--C-orange)
+- ![RepoBench-P](https://img.shields.io/badge/🤗-RepoBench--P-orange)
 
 ### Load by cloning the repository
 
@@ -44,7 +84,7 @@ cd repobench
 pip install -r requirements.txt
 ```
 
-## Settings
+## ⚙️ Settings
 
 As discussed in the paper, we have three settings for each task:
 
@@ -81,7 +121,7 @@ cross_file_first, cross_file_random, in_file = load_data(task=task, language=lan
 
 The data format and specific usage for each task are as follows.
 
-## RepoBench-R
+## 🔎 RepoBench-R
 
 RepoBench-R (Retrieval) targets the retrieval component of a repository-level auto-completion system, focusing on extracting the most relevant code snippet from a project repository for next-line code prediction.
 
@@ -129,7 +169,7 @@ settings = ["cross_file_first", "cross_file_random"]
 cross_file_first, cross_file_random = load_data(task=task, language=language, settings=settings)
 ```
 
-## RepoBench-C
+## 🔮 RepoBench-C
 
 RepoBench-C (Code Completion) focuses on the prediction of the next line of code, given in-file context (including several preceding lines and import statements), and cross-file context. 
 
@@ -195,7 +235,7 @@ The format will be as follows:
 }
 ```
 
-## RepoBench-P
+## 🧩 RepoBench-P
 
 RepoBench-P (Pipeline) is a pipeline task that combines the retrieval and code completion tasks. Specifically, the retrieval task is used to retrieve the most relevant code snippet first, and then do the code completion task with retrieved code snippet as cross-file context for next-line prediction, which mirrors complex real-world scenarios that a practical auto-completion system would face.
 
@@ -246,11 +286,11 @@ settings = ["cross_file_first", "cross_file_random", "in_file"]
 
 cross_file_first, cross_file_random, in_file = load_data(task=task, language=language, settings=settings)
 ```
-## Baseline
+## 📊 Baseline
 
 See [BASELINE.md](BASELINE.md) for more details.
 
-## Citation
+## 📝 Citation
 
 If you use RepoBench in your research, please consider citing us:
 
