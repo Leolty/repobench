@@ -43,9 +43,9 @@
 
 RepoBench is now accessible on 🤗 HuggingFace Datasets. Explore the dataset cards:
 
-- ![RepoBench-R](https://img.shields.io/badge/🤗-RepoBench--R-orange)
-- ![RepoBench-C](https://img.shields.io/badge/🤗-RepoBench--C-orange)
-- ![RepoBench-P](https://img.shields.io/badge/🤗-RepoBench--P-orange)
+- [![RepoBench-R](https://img.shields.io/badge/🤗-RepoBench--R-orange)](https://huggingface.co/datasets/tianyang/repobench-r)
+- [![RepoBench-C](https://img.shields.io/badge/🤗-RepoBench--C-orange)](https://huggingface.co/datasets/tianyang/repobench-c)
+- [![RepoBench-P](https://img.shields.io/badge/🤗-RepoBench--P-orange)](https://huggingface.co/datasets/tianyang/repobench-p)
 
 ### Load by cloning the repository
 
