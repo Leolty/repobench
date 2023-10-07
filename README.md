@@ -37,6 +37,11 @@
   <strong>🪐 Explore the RepoBench Dataset! 🪐</strong>
 </p>
 
+## 📰 News
+
+ - **Oct. 6, 2023**: We are organizing the latest dataset to mitigate the data leakage, stay tuned!
+ - **Jun. 10, 2023**: First version released!
+
 ## 🛠️ Installation
 
 ### Load with 🤗 HuggingFace Datasets
