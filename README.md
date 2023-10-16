@@ -1,10 +1,16 @@
 <p align="center">
-  <a href="https://github.com/Leolty/repobench#gh-light-mode-only">
+  <!-- <a href="https://github.com/Leolty/repobench#gh-light-mode-only">
     <img src="assets/logo_light.png" width="318px" alt="repobench logo" />
   </a>
   <a href="https://github.com/Leolty/repobench#gh-dark-mode-only">
     <img src="assets/logo_dark.png" width="318px" alt="repobench logo" />
-  </a>
+  </a> -->
+  <div style="display: inline-block; vertical-align: middle;">
+    <a href="https://github.com/Leolty/repobench">
+      <img src="assets/repobench_v1.png" width="150px" alt="repobench logo" style="vertical-align: middle;"/>
+    </a>
+    <span style="font-size: 36px; vertical-align: middle;">RepoBench</span>
+  </div>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2306.03091">
