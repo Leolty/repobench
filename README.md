@@ -83,10 +83,10 @@ To load the desired dataset, use the `load_data` utility function from the `data
 
 ### Example
 
-Load `completion` data for `Python` with `cross_file_first`, `cross_file_random`, and `in_file` settings:
+Load `completion` data (the `8k` version) for `Python` with `cross_file_first`, `cross_file_random`, and `in_file` settings:
 
 ```python
-data = load_data(split='test', task='completion', language='python', settings=['cross_file_first', 'cross_file_random', 'in_file'], length='2k')
+data = load_data(split='test', task='completion', language='python', settings=['cross_file_first', 'cross_file_random', 'in_file'], length='8k')
 ```
 
 ## 🚨 Important Note on RepoBench Test Data
