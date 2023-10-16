@@ -69,7 +69,7 @@ To load the desired dataset, use the `load_data` utility function from the `data
 
 **Parameters**:
 
-- `split`: Specify whether you want the `train` or `test`` split. 
+- `split`: Specify whether you want the `train` or `test` split. 
 - `task`: Choose between `retrieval`, `completion` and `pipeline`.
 - `language`: Select the programming language, either `python` or `java`.
 - `settings`: Choose between `cross_file_first`, `cross_file_random`, or `in_file`. You can also provide a list combining these settings.
