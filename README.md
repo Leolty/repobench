@@ -88,15 +88,15 @@ data = load_data(split='test', task='completion', language='python', settings=['
 ```
 
 
-## 🚨 Important Note on RepoBench Test Data
-The `archive_data` folder holds code sourced from GitHub, created between February 9, 2023, and August 3, 2023. Please be vigilant: if your model's training data includes code from this timeframe, there's a risk of data leakage and memorization. This can jeopardize the integrity and trustworthiness of your model's evaluation results.
+## 🚨 RepoBench Test Data Alert
 
-📅 **Continuous Updates** Our commitment is to regularly update the RepoBench dataset. For the freshest code samples, monitor our release section. Interested in speeding things up or collaborating? Let's connect! Raise an issue, or send us an email. We genuinely value and encourage teamwork.
+🤯 **Data Leakage/Memorization:** The test data under `archive_data` folder holds code sourced from GitHub, created between February 9, 2023, and August 3, 2023. Please be vigilant: if your model's training data includes code from this timeframe, there's a risk of data leakage and memorization. This can jeopardize the integrity and trustworthiness of your model's evaluation results.
 
-🔔 **Benchmarking Note** We aim to provide the best, but due to computational constraints, we can't benchmark every data version. If you decide to use our dataset, be ready to benchmark against other competitors.
+📅 **Stay Updated with RepoBench:** Our commitment/idea is to regularly update the RepoBench dataset. If you're looking for the most up-to-date code samples, keep an eye out for our releases. And if you feel the need to expedite the process or suggest a collaboration, don't hesitate! Feel free to raise an issue or drop us an email to give us a nudge. Collaborative efforts are always welcomed and appreciated.
 
-⚖️ **License and Ownership Concerns** While we strive for accuracy, licenses for the included code may not have been meticulously verified individually. If you identify license discrepancies or if your code is included but you'd prefer it wasn't, please reach out to us immediately.
+🔔 **A Note on Benchmarking:** We aim to provide the best, but due to computational constraints, we can't benchmark every data version. If you decide to use our dataset, be ready to benchmark against other competitors.
 
+⚖️ **Licensing and Ownership:** While we strive for accuracy, licenses for the included repositories may not have been meticulously verified individually. If you identify license discrepancies or if your code is included but you'd prefer it wasn't, please reach out to us immediately.
 
 
 ## 📊 Baseline
