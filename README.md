@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://github.com/Leolty/repobench#gh-light-mode-only">
-    <img src="assets/repobench_light.png" width="318px" alt="repobench logo" />
+    <img src="assets/repobench_dark.png" width="318px" alt="repobench logo" />
   </a>
   <a href="https://github.com/Leolty/repobench#gh-dark-mode-only">
-    <img src="assets/repobench_dark.png" width="318px" alt="repobench logo" />
+    <img src="assets/repobench_light.png" width="318px" alt="repobench logo" />
   </a>
 
 <p align="center">
