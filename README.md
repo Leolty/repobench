@@ -89,6 +89,15 @@ Load `completion` data for `Python` with `cross_file_first`, `cross_file_random`
 data = load_data(split='test', task='completion', language='python', settings=['cross_file_first', 'cross_file_random', 'in_file'], length='2k')
 ```
 
+## 🚨 Important Note on RepoBench Test Data
+
+The `test` dataset found under `archive_data` contains code sourced from Github created between February 9, 2023, and August 3, 2023. If your model's training data encompasses any code from this specific time frame, you may encounter data leakage and memorization issues, which can severely impact the authenticity and reliability of your model's performance evaluations.
+
+📅 **Regular Updates**: We are dedicated to continually refreshing the RepoBench dataset. If you're looking for the most up-to-date code samples, keep an eye out for our releases. And if you feel the need to expedite the process or suggest a collaboration, don't hesitate! Feel free to raise an issue or drop us an email to give us a nudge. Collaborative efforts are always welcomed and appreciated.
+
+🔔 However, we'd like to note that due to limited computational resources, we may not be able to benchmark each version of the data. As such, if you decide to utilize the dataset, please be prepared to benchmark against your competitors as well.
+
+
 ## 📊 Baseline
 
 In an effort to streamline our codebase, we've removed the baseline running code since model inference should ideally be uncomplicated. For improved efficiency, we suggest leveraging libraries like [CTranslate2](https://github.com/OpenNMT/CTranslate2) and [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ). If you require the removed code or have further inquiries, kindly open an issue or reach out to me via email.
