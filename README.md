@@ -6,11 +6,9 @@
     <img src="assets/logo_dark.png" width="318px" alt="repobench logo" />
   </a>
 
-<p align="center"><i>RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems</i></p>
-
 <p align="center">
   <a href="https://arxiv.org/abs/2306.03091">
-    <img src="https://img.shields.io/badge/Paper-arXiv%3A2306.03091-blue" alt="Paper">
+    RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems
   </a>
 </p>
 
