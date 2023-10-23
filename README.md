@@ -59,7 +59,7 @@ To load the desired dataset, use the `load_data` utility function from the `data
 
 1. Import the `load_data` function:
    ```python
-   from data.utils import load_data
+   from archive_data.utils import load_data
    ```
 
 2. Call the function with the desired parameters:
