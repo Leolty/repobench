@@ -94,6 +94,8 @@ data = load_data(split='test', task='completion', language='python', settings=['
 
 📅 **Stay Updated with RepoBench:** Our commitment/idea is to regularly update the RepoBench dataset. If you're looking for the most up-to-date code samples, keep an eye out for our releases. And if you feel the need to expedite the process or suggest a collaboration, don't hesitate! Feel free to raise an issue or drop us an email to give us a nudge. Collaborative efforts are always welcomed and appreciated.
 
+> **Give us your knowledge cut-off, and we can provide the newest data.**
+
 🔔 **A Note on Benchmarking:** We aim to provide the best, but due to computational constraints, we can't benchmark every data version. If you decide to use our dataset, be ready to benchmark against other competitors.
 
 ⚖️ **Licensing and Ownership:** While we strive for accuracy, licenses for the included repositories may not have been meticulously verified individually. If you identify license discrepancies or if your code is included but you'd prefer it wasn't, please reach out to us immediately.
