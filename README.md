@@ -14,6 +14,14 @@
 
 <hr>
 
+## 🤔 Am I in RepoBench?
+
+We are always working on the next generation of RepoBench by crawling the most recent GitHub repositories! 🚀
+
+If you would like to have your code excluded from RepoBench, you can check if your data is in RepoBench and follow the link to **opt-out**:
+
+[🤗 Am I in RepoBech 🤗](https://huggingface.co/spaces/tianyang/in-the-repobench)
+
 
 ## 🛠️ Installation
 
