@@ -18,6 +18,9 @@
 
 We are always working on the next generation of RepoBench by crawling the most recent GitHub repositories! 🚀
 
+> [!IMPORTANT]
+> We are very open to any collaborations! If you want to test your model on the data with customised cut-off date or date range, please feel free to [drop us an email](mailto:til040@ucsd.edu?subject=[RepoBench]%20Collaborations) or raise an issue. We will try our best to help you out!
+
 If you would like to have your code excluded from RepoBench, you can check if your data is in RepoBench and follow the link to **opt-out**:
 
 [🤗 Am I in RepoBech 🤗](https://huggingface.co/spaces/tianyang/in-the-repobench)
@@ -30,7 +33,8 @@ git clone https://github.com/Leolty/repobench.git
 cd repobench
 ```
 
-> **Note**: There is no `requirements.txt` for this project. You can simply follow the error message to install the missing packages.
+> [!NOTE] 
+> There is a `requirements.txt` file, which contains dependencies for reproducing the results in the paper. If you are only interested in the data, you can skip the installation of dependencies.
 
 ## ⚙️ Description of Settings
 
@@ -54,7 +58,8 @@ To load the desired dataset, use the `load_data` utility function from the `data
     rm ./archive_data/test.zip
     ```
 
-> **Note**: If you download through the browser, please make sure to unzip the file and place the `test` folder under `archive_data`, i.e., `archive_data/test`.
+> [!NOTE] 
+> If you download through the browser, please make sure to unzip the file and place the `test` folder under `archive_data`, i.e., `archive_data/test`.
   
 2. (Optional) If you also want to download the training data, it can be found [here](https://drive.google.com/file/d/179TXJBfMMbP9FDC_hsdpGLQPmN6iB4vY/view?usp=sharing). Similarly, you can run the following command:
    ```bash
@@ -102,6 +107,7 @@ data = load_data(split='test', task='completion', language='python', settings=['
 
 📅 **Stay Updated with RepoBench:** Our commitment/idea is to regularly update the RepoBench dataset. If you're looking for the most up-to-date code samples, keep an eye out for our releases. And if you feel the need to expedite the process or suggest a collaboration, don't hesitate! Feel free to raise an issue or drop us an email to give us a nudge. Collaborative efforts are always welcomed and appreciated.
 
+> [!TIP]
 > **Give us your knowledge cut-off, and we can provide the newest data.**
 
 🔔 **A Note on Benchmarking:** We aim to provide the best, but due to computational constraints, we can't benchmark every data version. If you decide to use our dataset, be ready to benchmark against other competitors.
@@ -111,7 +117,11 @@ data = load_data(split='test', task='completion', language='python', settings=['
 
 ## 📊 Baseline
 
-In an effort to streamline our codebase, we've removed the baseline running code since model inference should ideally be uncomplicated. For improved efficiency, we suggest leveraging libraries like [CTranslate2](https://github.com/OpenNMT/CTranslate2) and [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ). If you require the removed code or have further inquiries, kindly open an issue or reach out to me via email.
+Follow the instructions in [REPRODUCE.md](./REPRODUCE.md) to reproduce the results of the baseline models.
+
+> [!WARNING]
+> The code is not well-organized and fully tested. If you encounter any issues, please feel free to raise issues or submit PRs. Thanks!
+
 
 ## 📝 Citation
 
