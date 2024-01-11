@@ -116,3 +116,6 @@ python inference_repobench_p.py \
 - `--model_name`: The name of the model to use, it should support starcoder and codex, but since codex models were turned off now, we only support starcoder.
 - `--resume_part` and `--resume`: Same as RepoBench-C, check the arguments above for details.
 
+### 📊 Evaluating the Results
+
+Simply input the path of the generated results to the `evaluate_completion.py` for completion and pipeline tasks, and `evaluate_retrieval.py` for retrieval task.
