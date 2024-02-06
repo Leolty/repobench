@@ -18,16 +18,14 @@
 
 <hr>
 
-## 🤔 Am I in RepoBench?
+## 🔥 News
 
-We are always working on the next generation of RepoBench by crawling the most recent GitHub repositories! 🚀
+- *Feb 5th, 2024*: **RepoBench v1.1** (with newest code data) is now available on the 🤗 HuggingFace Hub. You can access the datasets for Python and Java using the following links:
+  - For Python: [🤗 Repobench Python V1.1](https://huggingface.co/datasets/tianyang/repobench_python_v1.1)
+  - For Java: [🤗 Repobench Java V1.1](https://huggingface.co/datasets/tianyang/repobench_java_v1.1)
+  > **For more details of RepoBench v1.1, please refer to the [data directory](./data/README.md).**
 
-> [!IMPORTANT]
-> We are very open to any collaborations! If you want to test your model on the data with customised cut-off date or date range, please feel free to [drop us an email](mailto:til040@ucsd.edu?subject=[RepoBench]%20Collaborations) or raise an issue. We will try our best to help you out!
-
-If you would like to have your code excluded from RepoBench, you can check if your data is in RepoBench and follow the link to **opt-out**:
-
-[🤗 Am I in RepoBech 🤗](https://huggingface.co/spaces/tianyang/in-the-repobench)
+- *Jan 16th, 2024*: RepoBench is accepted to ICLR 2024! 🎉
 
 
 ## 🛠️ Installation
@@ -135,10 +133,9 @@ If you use RepoBench in your research, please consider citing us:
 @misc{liu2023repobench,
       title={RepoBench: Benchmarking Repository-Level Code Auto-Completion Systems}, 
       author={Tianyang Liu and Canwen Xu and Julian McAuley},
-      year={2023},
-      eprint={2306.03091},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      year={2024},
+      url={https://arxiv.org/abs/2306.03091},
+      booktitle={International Conference on Learning Representations}
 }
 ```
 
