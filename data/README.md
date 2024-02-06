@@ -24,7 +24,7 @@ This directory hosts the datasets for subsequet versions of RepoBench. We are co
 
 - Our primary focus is on **next-line prediction** tasks to aid in code auto-completion. If your research requires retrieval data, please don't hesitate to reach out to us for collaboration.
 - Our datasets will be hosted on 🤗 HuggingFace, making them easily accessible for everyone.
-- Each data point within our datasets is categorized based on the prompt length (number of tokens), which is determined by OpenAI's GPT-4 tokenizer using (tiktoken)[https://github.com/openai/tiktoken]. Here's a detailed table illustrating the levels we've defined:
+- Each data point within our datasets is categorized based on the prompt length (number of tokens), which is determined by OpenAI's GPT-4 tokenizer using [tiktoken](https://github.com/openai/tiktoken). Here's a detailed table illustrating the levels we've defined:
 
   | Level | Prompt Length (Number of Tokens) |
   |-------|------------------------|
