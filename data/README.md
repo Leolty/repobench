@@ -42,7 +42,7 @@ This directory hosts the datasets for subsequet versions of RepoBench. We are co
 
 ### RepoBench v1.1
 
-RepoBench v1.1 includes data collected from GitHub between **October 6, 2023**, and **November 31, 2023**. To mitigate the data leakage and memorization issues, we conducted a deduplication process on the Stack v2 (coming soon) based on the file content.
+RepoBench v1.1 includes data collected from GitHub between **October 6, 2023**, and **December 31, 2023**. To mitigate the data leakage and memorization issues, we conducted a deduplication process on the Stack v2 (coming soon) based on the file content.
 
 You can access RepoBench v1.1 at the following links:
 - For Python: [🤗 Repobench Python V1.1](https://huggingface.co/datasets/tianyang/repobench_python_v1.1)
