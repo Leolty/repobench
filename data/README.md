@@ -38,6 +38,8 @@ This directory hosts the datasets for subsequet versions of RepoBench. We are co
   | 64k   | 28,800 - 57,600        |
   | 128k  | 57,600 - 100,000       |
 
+- We hereby provide the official implementation for constructing prompts [here](https://github.com/Leolty/repobench/blob/53c1c55ad9e6d97d2b60dd2c9548ed1cd463b6a5/data/utils.py#L3). Please note that the methods provided are not necessarily the optimal way of construction. Reordering, retrieval argumentation, or employing different cropping/construction techniques could potentially lead to varying degrees of improvement. Ensure that the evaluations are conducted fairly.
+
 ## 📚 Versions
 
 ### RepoBench v1.1
