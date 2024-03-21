@@ -42,9 +42,9 @@ def construct_prompt(
             # split the cross-file prompt into lines
             cross_file_prompt_lines = cross_file_prompt.split("\n")
             # drop lines from end until the extra token number is less than 0
-            for i in range(len(repo_prompt_lines)-1, -1, -1):
-                extra_token_num -= len(tokenizer.encode(cross_file_prompt_lines[i]))
-                if extra_token_num < 0:
+            for i in range(len(cross_file_prompt_lines)-1, -1, -1):
+                exceed_token_nums -= len(tokenizer.encode(cross_file_prompt_lines[i]))
+                if exceed_token_nums < 0:
                     break
             
             # join the lines back
