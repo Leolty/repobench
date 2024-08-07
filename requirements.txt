@@ -4,5 +4,4 @@ torch
 fuzzywuzzy
 difflib
 tqdm
-ctranslate2
 fire
