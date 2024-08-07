@@ -49,80 +49,53 @@ As discussed in the paper, we have three settings for each task:
 
 ## 📥 Load Data
 
-To load the desired dataset, use the `load_data` utility function from the `data.utils` module.
-
-### Download Data via Google Drive
-
-1. Download the test data from [Google Drive](https://drive.google.com/file/d/1HvFFnOybTKEJCrEypWh4ftmW6DZBaiK_/view?usp=sharing), or simply run the following command:
-   ```bash
-    gdown --id '1HvFFnOybTKEJCrEypWh4ftmW6DZBaiK_' --output ./archive_data/test.zip
-    unzip ./archive_data/test.zip -d ./archive_data/
-    rm ./archive_data/test.zip
-    ```
-
-> [!NOTE] 
-> If you download through the browser, please make sure to unzip the file and place the `test` folder under `archive_data`, i.e., `archive_data/test`.
-  
-2. (Optional) If you also want to download the training data, it can be found [here](https://drive.google.com/file/d/179TXJBfMMbP9FDC_hsdpGLQPmN6iB4vY/view?usp=sharing). Similarly, you can run the following command:
-   ```bash
-    gdown --id '179TXJBfMMbP9FDC_hsdpGLQPmN6iB4vY' --output ./archive_data/train.zip
-    unzip ./archive_data/train.zip -d ./archive_data/
-    rm ./archive_data/train.zip
-    ```
-
-### How to Use
-
-1. Import the `load_data` function:
-   ```python
-   from archive_data.utils import load_data
-   ```
-
-2. Call the function with the desired parameters:
-   ```python
-   data = load_data(split, task, language, settings, length)
-   ```
-
-**Parameters**:
-
-- `split`: Specify whether you want the `train` or `test` split. 
-- `task`: Choose between `retrieval`, `completion` and `pipeline`.
-- `language`: Select the programming language, either `python` or `java`.
-- `settings`: Choose between `cross_file_first`, `cross_file_random`, or `in_file`. You can also provide a list combining these settings.
-- `length`: (Optional) For the `completion` task, please specify the length as either `2k` or `8k`.
-
-**Return**:
-- If a single setting is provided, the function returns the loaded data for that setting.
-- If multiple settings are specified, the function returns a list containing data for each setting.
-
-### Example
-
-Load `completion` data (the `8k` version) for `Python` with `cross_file_first`, `cross_file_random`, and `in_file` settings:
-
 ```python
-data = load_data(split='test', task='completion', language='python', settings=['cross_file_first', 'cross_file_random', 'in_file'], length='8k')
+from datasets import load_dataset
+
+dataset = load_dataset("tianyang/repobench_python_v1.1", ignore_verifications=True)
 ```
 
+For more details, visit the Hugging Face dataset pages:
+- Python: [🤗 Repobench Python V1.1](https://huggingface.co/datasets/tianyang/repobench_python_v1.1)
+- Java: [🤗 Repobench Java V1.1](https://huggingface.co/datasets/tianyang/repobench_java_v1.1)
 
-## 🚨 RepoBench Test Data Alert
+## 🚀 Running Experiments
 
-🤯 **Data Leakage/Memorization:** The test data under `archive_data` folder holds code sourced from GitHub, created between February 9, 2023, and August 3, 2023. Please be vigilant: if your model's training data includes code from this timeframe, there's a risk of data leakage and memorization. This can jeopardize the integrity and trustworthiness of your model's evaluation results.
+To run experiments on the RepoBench v1.1 dataset, we provide a very basic `run.py` script using the 🤗 Transformers library.
 
-📅 **Stay Updated with RepoBench:** Our commitment/idea is to regularly update the RepoBench dataset. If you're looking for the most up-to-date code samples, keep an eye out for our releases. And if you feel the need to expedite the process or suggest a collaboration, don't hesitate! Feel free to raise an issue or drop us an email to give us a nudge. Collaborative efforts are always welcomed and appreciated.
+Example usage:
 
-> [!TIP]
-> **Give us your knowledge cut-off, and we can provide the newest data.**
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --model_name "deepseek-ai/deepseek-coder-1.3b-base" \
+               --dataset_name "tianyang/repobench_python_v1.1" \
+               --start_date "2023-12-01" \
+               --end_date "2023-12-31" \
+               --language "python" \
+               --max_token_nums 15800 \
+               --levels "2k" "4k" "8k" "12k" "16k" \
+               --temperature 0.2 \
+               --top_p 0.95 \
+               --max_new_tokens 128 \
+               --batch_size 1
+```
 
-🔔 **A Note on Benchmarking:** We aim to provide the best, but due to computational constraints, we can't benchmark every data version. If you decide to use our dataset, be ready to benchmark against other competitors.
+For a full list of available parameters, please refer to the `run.py` file. And it should be super easy to customize the script for your own needs.
 
-⚖️ **Licensing and Ownership:** While we strive for accuracy, licenses for the included repositories may not have been meticulously verified individually. If you identify license discrepancies or if your code is included but you'd prefer it wasn't, please reach out to us immediately.
+## 📊 Evaluation
 
+After generating completions, you can evaluate the results using the `eval.py` script. This script calculates various metrics including Exact Match (EM), Edit Similarity (ES), and CodeBLEU (CB) scores for each setting.
 
-## 📊 Baseline
+To run the evaluation:
 
-Follow the instructions in [REPRODUCE.md](./REPRODUCE.md) to reproduce the results of the baseline models.
+```bash
+python eval.py --path "results/deepseek-coder-1.3b-base-python" --language "python"
+```
 
-> [!WARNING]
-> The code is not well-organized and fully tested. If you encounter any issues, please feel free to raise issues or submit PRs. Thanks!
+The script will output scores for each level (`cross_file_first`, `cross_file_random`, `in_file`) as well as weighted averages across all levels.
+
+## 📝 Note
+
+This branch of the repository is specifically for RepoBench v1.1. For the results presented in our ICLR 2024 paper, which used the initial version of RepoBench, please refer to the `archive/v0` branch of this repository.
 
 
 ## 📝 Citation
