@@ -95,7 +95,7 @@ The script will output scores for each level (`cross_file_first`, `cross_file_ra
 
 ## 📝 Note
 
-This branch of the repository is specifically for RepoBench v1.1. For the results presented in our ICLR 2024 paper, which used the initial version of RepoBench, please refer to the `archive/v0` branch of this repository.
+This branch of the repository is specifically for RepoBench v1.1. For the results presented in our ICLR 2024 paper, which used the initial version of RepoBench, please refer to the [`archive/v0` branch](https://github.com/Leolty/repobench/tree/archive/v0) of this repository.
 
 
 ## 📝 Citation
