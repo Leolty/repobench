@@ -28,7 +28,7 @@ def construct_prompt(
         cross_file_prompt += f"{comment_symbol} Path: {snippet['path']}\n{snippet['snippet']}" + "\n\n"
     
     # in-file prompt
-    in_file_prompt = f"{comment_symbol} Path: {data['file_path']}\n{data['import_statement']}\n{data['cropped_code']}"
+    in_file_prompt = f"{comment_symbol} Path: {data['file_path']}\n{data['import_statement']}\n{data['cropped_code'].rstrip()}\n"
 
     # if we assign the tokenizer and the max_token_nums, we will truncate the cross-file prompt to meet the constraint
     if tokenizer is not None and max_token_nums is not None:
